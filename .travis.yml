@@ -9,4 +9,6 @@ before_install:
     - ln -sf */* .
 
 script:
+    - pwd
+    - ls
     - ./get_version.sh
