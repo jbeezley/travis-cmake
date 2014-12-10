@@ -4,11 +4,10 @@ env: LOCAL_CMAKE_PREFIX="./cmake-install"
 
 before_install:
     - mkdir "${LOCAL_CMAKE_PREFIX}"
-    - cd "${LOCAL_CMAKE_PREFIX}"
+    - pushd "${LOCAL_CMAKE_PREFIX}"
     - curl "http://www.cmake.org/files/v3.1/cmake-3.1.0-rc3-Linux-x86_64.tar.gz" | gunzip -c | tar x
     - ln -sf */* .
+    - popd
 
 script:
-    - pwd
-    - ls
     - ./get_version.sh
