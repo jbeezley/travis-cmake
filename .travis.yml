@@ -8,3 +8,4 @@ script:
     - python2.7 --version
     - /usr/bin/python --version
     - type -a python2.7
+    - type -a virtualenv
