@@ -1,13 +1,13 @@
-language: node_js
+language: python
 
-env: LOCAL_CMAKE_PREFIX="./cmake-install"
+sudo: false
 
-before_install:
-    - mkdir "${LOCAL_CMAKE_PREFIX}"
-    - pushd "${LOCAL_CMAKE_PREFIX}"
-    - curl "http://www.cmake.org/files/v3.1/cmake-3.1.0-rc3-Linux-x86_64.tar.gz" | gunzip -c | tar x
-    - ln -sf */* .
-    - popd
+python:
+  - "3.4"
+  - "2.6"
 
 script:
-    - ./get_version.sh
+    - type -a python
+    - python2 --version
+    - python2.7 --version
+    - /usr/bin/python --version
