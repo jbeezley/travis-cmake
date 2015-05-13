@@ -1,13 +1,10 @@
-language: python
+language: c
 
 sudo: false
-
-python:
-  - "3.4"
-  - "2.6"
 
 script:
     - type -a python
     - python2 --version
     - python2.7 --version
     - /usr/bin/python --version
+    - type -a python2.7
